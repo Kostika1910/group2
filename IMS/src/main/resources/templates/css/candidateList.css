@@ -1,0 +1,200 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left {
+    width: 20%;
+    text-align: center;
+    background-color: navajowhite;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+
+.left img {
+    width: 60px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.left span {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.left a {
+    text-decoration: none;
+    color: black;
+}
+
+.left .home {
+    padding: 20px;
+    display: block;
+    background-color: #ccc;
+}
+
+.left .home:hover {
+    background-color: beige;
+}
+
+.left .remain {
+    padding: 20px;
+    display: block;
+}
+
+.left .remain:hover {
+    background-color: beige;
+}
+
+.left .remain div {
+    margin-top: 5px;
+}
+
+.right {
+    width: 80%;
+    padding: 20px;
+    background-color: white;
+    overflow-y: auto;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.user-info i {
+    margin-right: 10px;
+}
+
+.user-info button {
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+    font-style: italic;
+}
+
+.tabs {
+    margin: 20px 0;
+}
+
+.tablinks {
+    background-color: #f1f1f1;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 17px;
+    margin-right: 5px;
+    border-radius: 5px 5px 0 0;
+}
+
+.tablinks:hover {
+    background-color: #ddd;
+}
+
+.tablinks.active {
+    background-color: #ccc;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border-top: none;
+}
+
+.candidate-section header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.candidate-section header input,
+.candidate-section header select {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.candidate-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.candidate-section table th,
+.candidate-section table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.candidate-section table th {
+    background-color: #f9f9f9;
+}
+
+.candidate-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.candidate-form h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.candidate-form .form-group {
+    margin-bottom: 15px;
+}
+
+.candidate-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.candidate-form .form-group input,
+.candidate-form .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.candidate-form .form-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.candidate-form .form-actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.candidate-form .form-actions button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.candidate-form .form-actions button[type="reset"] {
+    background-color: #f44336;
+    color: white;
+}

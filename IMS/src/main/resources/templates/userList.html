@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User List</title>
+    <link rel="stylesheet" href="css/userList.css" />
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    />
+    <script>
+        function confirmExit() {
+            var confirmation = confirm("Bạn có muốn thoát không?");
+            if (confirmation) {
+                window.location.href = "login.html";
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="left">
+        <div class="logo">
+            <img src="img/33e3bcaae41d44431d0c.jpg" alt="Anh Dev" />
+            <span>IMS</span>
+        </div>
+        <a href="home.html" class="fa-solid fa-house home"></a>
+        <a href="#" class="remain">
+            <i class="fa-solid fa-users"></i>
+            <div>Candidate</div>
+        </a>
+        <a href="#" class="remain">
+            <i class="fa-solid fa-briefcase"></i>
+            <div>Job</div>
+        </a>
+        <a href="#" class="remain">
+            <i class="fa-regular fa-comments"></i>
+            <div>Interview</div>
+        </a>
+        <a href="#" class="remain">
+            <i class="fa-regular fa-file-lines"></i>
+            <div>Offer</div>
+        </a>
+        <a href="#" class="remain" style="background-color: #ccc">
+            <i class="fa-solid fa-user-tag"></i>
+            <div>User</div>
+        </a>
+    </div>
+    <div class="right">
+        <div class="right_head">
+            <div class="title">User Management</div>
+            <div>
+                <i class="fa-solid fa-user"></i>
+                <button onclick="confirmExit()">Log out</button>
+            </div>
+        </div>
+        <div style="margin: 0 0 10px 45px">User list</div>
+        <input
+                type="text"
+                placeholder="Search"
+                style="
+            margin: 0 10px 20px 30px;
+            padding: 6px;
+            width: 170px;
+            background-color: lightblue;
+            border: none;
+          "
+        />
+        <select name="type" id="type">
+            <option value="username">Username</option>
+            <option value="role">Role</option>
+            <option value="status">Status</option>
+        </select>
+        <button class="fa-solid fa-circle-plus btn-create"></button>
+        <table class="table-list">
+            <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Phone No.</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th style="width: 13%">Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
