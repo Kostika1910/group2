@@ -73,6 +73,11 @@ body {
     font-weight: bold;
 }
 
+.sub-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
 .user-info {
     display: flex;
     align-items: center;
@@ -119,7 +124,7 @@ body {
     border-top: none;
 }
 
-.candidate-section header {
+.offer-section header {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -127,22 +132,16 @@ body {
     margin-bottom: 20px;
 }
 
-.candidate-section header input,
-.candidate-section header select {
+.offer-section header input,
+.offer-section header select {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
 }
 
-.candidate-section header .search-box {
-    flex: 1;
-}
-
-.candidate-section header .status-select {
-    flex: 1;
-}
-
-.candidate-section header .add-button {
+.offer-section header .search-button,
+.offer-section header .add-button,
+.offer-section header .export-button {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -150,67 +149,29 @@ body {
     background-color: #f1f1f1;
 }
 
-.candidate-section table {
+.offer-section table {
     width: 100%;
     border-collapse: collapse;
 }
 
-.candidate-section table th,
-.candidate-section table td {
+.offer-section table th,
+.offer-section table td {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: left;
 }
 
-.candidate-section table th {
+.offer-section table th {
     background-color: #f9f9f9;
 }
 
-.candidate-form {
+.offer-section .action-icons {
     display: flex;
-    flex-direction: column;
+    gap: 10px;
 }
 
-.candidate-form h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.candidate-form .form-group {
-    margin-bottom: 15px;
-}
-
-.candidate-form .form-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.candidate-form .form-group input,
-.candidate-form .form-group select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.candidate-form .form-actions {
-    display: flex;
-    justify-content: space-between;
-}
-
-.candidate-form .form-actions button {
-    padding: 10px 20px;
+.offer-section .action-icons button {
+    background-color: transparent;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-}
-
-.candidate-form .form-actions button[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.candidate-form .form-actions button[type="reset"] {
-    background-color: #f44336;
-    color: white;
 }

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Offer</title>
+    <link rel="stylesheet" href="css/createOffer.css" />
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    />
+    <script>
+        function confirmExit() {
+            var confirmation = confirm("Bạn có muốn thoát không?");
+            if (confirmation) {
+                window.location.href = "login.html";
+            }
+        }
+
+        function openCreateOfferForm() {
+            window.location.href = "createOffer.html";
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="left">
+        <div class="logo">
+            <img src="img/33e3bcaae41d44431d0c.jpg" alt="Anh Dev" />
+            <span>IMS</span>
+        </div>
+        <a href="home.html" class="fa-solid fa-house home"></a>
+        <a href="candidateList.html" class="remain">
+            <i class="fa-solid fa-users"></i>
+            <div>Candidate</div>
+        </a>
+        <a href="job.html" class="remain">
+            <i class="fa-solid fa-briefcase"></i>
+            <div>Job</div>
+        </a>
+        <a href="#" class="remain">
+            <i class="fa-regular fa-comments"></i>
+            <div>Interview</div>
+        </a>
+        <a href="offerList.html" class="remain">
+            <i class="fa-regular fa-file-lines"></i>
+            <div>Offer</div>
+        </a>
+        <a href="#" class="remain">
+            <i class="fa-solid fa-user-tag"></i>
+            <div>User</div>
+        </a>
+    </div>
+    <div class="right">
+        <div class="title">Offer</div>
+        <div class="breadcrumb">
+            <a href="offerList.html">OfferList</a> &gt; <span>Create Offer</span>
+        </div>
+        <div class="form-container">
+            <form action="submitOffer" method="POST">
+                <div class="form-section">
+                    <label for="candidate">Candidate *</label>
+                    <select id="candidate" name="candidate" required>
+                        <option value="">Select Candidate Name</option>
+                        <!-- Options will be populated here -->
+                    </select>
+                </div>
+                <div class="form-section">
+                    <label for="position">Position *</label>
+                    <select id="position" name="position" required>
+                        <option value="">Select a Position</option>
+                        <!-- Options will be populated here -->
+                    </select>
+                </div>
+                <div class="form-section">
+                    <label for="approver">Approver *</label>
+                    <select id="approver" name="approver" required>
+                        <option value="">Select an approver</option>
+                        <!-- Options will be populated here -->
+                    </select>
+                </div>
+                <div class="form-section">
+                    <label for="interviewInfo">Interview info *</label>
+                    <select id="interviewInfo" name="interviewInfo" required>
+                        <option value="">Select an interview schedule title</option>
+                        <!-- Options will be populated here -->
+                    </select>
+                </div>
+                <div class="form-section">
+                    <label for="contractStart">Contract Period *</label>
+                    <div class="date-range">
+                        <input type="date" id="contractStart" name="contractStart" required>
+                        <span>To</span>
+                        <input type="date" id="contractEnd" name="contractEnd" required>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <label for="interviewNotes">Interview Notes</label>
+                    <textarea id="interviewNotes" name="interviewNotes" rows="2">Candidate is fully-match with 5 years experience in IT industry</textarea>
+                </div>
+                <div class="form-section">
+                    <label for="contractType">Contract Type *</label>
+                    <select id="contractType" name="contractType" required>
+                        <option value="">Select a type of contract</option>
+                        <!-- Options will be populated here -->
+                    </select>
+                </div>
+                <div class="form-section">
+                    <label for="level">Level *</label>
+                    <select id="level" name="level" required>
+                        <option value="">Select a level</option>
+                        <!-- Options will be populated here -->
+                    </select>
+                </div>
+                <div class="form-section">
+                    <label for="department">Department *</label>
+                    <select id="department" name="department" required>
+                        <option value="">Select a department</option>
+                        <option value="">Select Department</option>
+                        <option value="HR">HR</option>
+                        <option value="IT">IT</option>
+                        <option value="Business">Business</option>
+                        <option value="Accounting">Accounting</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Product Policy">Product Policy</option>
+                        <option value="Legal">Legal</option>
+                        <option value="Customer Service">Customer Service</option>
+                        <option value="Sales">Sales</option>
+                    </select>
+                </div>
+                <div class="form-section">
+                    <label for="recruiterOwner">Recruiter Owner *</label>
+                    <input type="text" id="recruiterOwner" name="recruiterOwner" value="Danv" readonly>
+                </div>
+                <div class="form-section">
+                    <label for="dueDate">Due Date *</label>
+                    <input type="date" id="dueDate" name="dueDate" required>
+                </div>
+                <div class="form-section">
+                    <label for="basicSalary">Basic Salary *</label>
+                    <input type="number" id="basicSalary" name="basicSalary" placeholder="Enter basic salary" required>
+                </div>
+                <div class="form-section">
+                    <label for="note">Note</label>
+                    <textarea id="note" name="note" rows="2"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit">Submit</button>
+                    <button type="button" onclick="window.location.href='offerList.html'">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
