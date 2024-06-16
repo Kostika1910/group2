@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offer Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/offerDetails.css">
+    <script>
+        function loadOfferData() {
+            const offerData = {
+                candidate: '',
+                position: '',
+                approver: '',
+                interviewInfo: '',
+                contractStart: '',
+                contractEnd: '',
+                interviewNotes: '',
+                status: '',
+                contractType: '',
+                level: '',
+                department: '',
+                recruiterOwner: '',
+                dueDate: '',
+                basicSalary: '',
+                note: '',
+                createdDate: '',
+                lastUpdatedBy: '',
+                lastUpdatedDate: ''
+            };
+
+            document.getElementById('candidate').innerText = offerData.candidate;
+            document.getElementById('position').innerText = offerData.position;
+            document.getElementById('approver').innerText = offerData.approver;
+            document.getElementById('interviewInfo').innerText = offerData.interviewInfo;
+            document.getElementById('contractPeriod').innerText = `From ${offerData.contractStart} To ${offerData.contractEnd}`;
+            document.getElementById('interviewNotes').innerText = offerData.interviewNotes;
+            document.getElementById('status').innerText = offerData.status;
+            document.getElementById('contractType').innerText = offerData.contractType;
+            document.getElementById('level').innerText = offerData.level;
+            document.getElementById('department').innerText = offerData.department;
+            document.getElementById('recruiterOwner').innerText = offerData.recruiterOwner;
+            document.getElementById('dueDate').innerText = offerData.dueDate;
+            document.getElementById('basicSalary').innerText = offerData.basicSalary;
+            document.getElementById('note').innerText = offerData.note;
+            document.getElementById('createdInfo').innerText = `Created on ${offerData.createdDate}, last updated by ${offerData.lastUpdatedBy} ${offerData.lastUpdatedDate}`;
+        }
+
+        window.onload = loadOfferData;
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="left">
+        <div class="logo">
+            <img src="img/33e3bcaae41d44431d0c.jpg" alt="Logo">
+            <span>IMS</span>
+        </div>
+        <a href="home.html" class="home">
+            <i class="icon fas fa-home"></i> Home
+        </a>
+        <a href="candidateList.html" class="remain">
+            <i class="icon fas fa-users"></i> Candidate
+        </a>
+        <a href="job.html" class="remain">
+            <i class="icon fas fa-briefcase"></i> Job
+        </a>
+        <a href="#" class="remain">
+            <i class="icon fas fa-calendar"></i> Interview
+        </a>
+        <a href="offerList.html" class="remain">
+            <i class="icon fas fa-file-alt"></i> Offer
+        </a>
+        <a href="#" class="remain">
+            <i class="icon fas fa-user"></i> User
+        </a>
+    </div>
+    <div class="right">
+        <div class="header">
+            <div class="title">Offer Details</div>
+            <div class="user-info">
+                <span>hoannk HR Department</span>
+                <a href="logout.html">Logout</a>
+            </div>
+        </div>
+        <div class="breadcrumb">
+            <a href="offerList.html">OfferList</a> &gt; <span>View Offer</span>
+        </div>
+        <div class="content">
+            <div class="info-section">
+                <div class="section-title">Offer Information</div>
+                <div class="row">
+                    <label>Candidate:</label>
+                    <div id="candidate"></div>
+                </div>
+                <div class="row">
+                    <label>Position:</label>
+                    <div id="position"></div>
+                </div>
+                <div class="row">
+                    <label>Approver:</label>
+                    <div id="approver"></div>
+                </div>
+                <div class="row">
+                    <label>Interview Info:</label>
+                    <div id="interviewInfo"></div>
+                </div>
+                <div class="row">
+                    <label>Contract Period:</label>
+                    <div id="contractPeriod"></div>
+                </div>
+                <div class="row">
+                    <label>Interview Notes:</label>
+                    <div id="interviewNotes"></div>
+                </div>
+                <div class="row">
+                    <label>Status:</label>
+                    <div id="status"></div>
+                </div>
+            </div>
+            <div class="info-section">
+                <div class="section-title">Contract Details</div>
+                <div class="row">
+                    <label>Contract Type:</label>
+                    <div id="contractType"></div>
+                </div>
+                <div class="row">
+                    <label>Level:</label>
+                    <div id="level"></div>
+                </div>
+                <div class="row">
+                    <label>Department:</label>
+                    <div id="department"></div>
+                </div>
+                <div class="row">
+                    <label>Recruiter Owner:</label>
+                    <div id="recruiterOwner"></div>
+                </div>
+                <div class="row">
+                    <label>Due Date:</label>
+                    <div id="dueDate"></div>
+                </div>
+                <div class="row">
+                    <label>Basic Salary:</label>
+                    <div id="basicSalary"></div>
+                </div>
+                <div class="row">
+                    <label>Note:</label>
+                    <div id="note"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div id="createdInfo" style="font-size: small; color: rgb(128,128,128); text-align: right;"></div>
+            </div>
+            <div class="actions">
+                <button class="edit-button">Edit</button>
+                <button class="cancel-button">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

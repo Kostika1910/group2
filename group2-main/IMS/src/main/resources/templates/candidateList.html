@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Candidate List</title>
+    <link rel="stylesheet" href="css/candidateList.css" />
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    />
+    <script>
+        function confirmExit() {
+            var confirmation = confirm("Bạn có muốn thoát không?");
+            if (confirmation) {
+                window.location.href = "login.html";
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="left">
+        <div class="logo">
+            <img src="img/33e3bcaae41d44431d0c.jpg" alt="Anh Dev" />
+            <span>IMS</span>
+        </div>
+        <a href="home.html" class="fa-solid fa-house home"></a>
+        <a href="candidateList.html" class="remain">
+            <i class="fa-solid fa-users"></i>
+            <div>Candidate</div>
+        </a>
+        <a href="#" class="remain">
+            <i class="fa-solid fa-briefcase"></i>
+            <div>Job</div>
+        </a>
+        <a href="#" class="remain">
+            <i class="fa-regular fa-comments"></i>
+            <div>Interview</div>
+        </a>
+        <a href="offerList.html" class="remain">
+            <i class="fa-regular fa-file-lines"></i>
+            <div>Offer</div>
+        </a>
+        <a href="#" class="remain">
+            <i class="fa-solid fa-user-tag"></i>
+            <div>User</div>
+        </a>
+    </div>
+    <div class="right">
+        <div class="title">Candidate</div>
+        <div class="user-info">
+            <i class="fa-solid fa-user"></i>
+            <button onclick="confirmExit()">Log out</button>
+        </div>
+        <div id="CandidateList" class="tabcontent">
+            <div class="candidate-section">
+                <header>
+                    <input type="text" placeholder="Search by name..." class="search-box" />
+                    <select class="status-select">
+                        <option value="">Filter by status</option>
+                        <option value="interviewed">Interviewed</option>
+                        <option value="hired">Hired</option>
+                        <option value="rejected">Rejected</option>
+                    </select>
+                    <button th:onclick="|window.location.href='@{templates/createOffer.html}'|" class="add-button">Add New Candidate</button>
+                </header>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="candidate : ${candidates}">
+                        <td th:text="${candidate.name}">John Doe</td>
+                        <td th:text="${candidate.email}">john.doe@example.com</td>
+                        <td th:text="${candidate.phone}">(555) 555-5555</td>
+                        <td th:text="${candidate.status}">Interviewed</td>
+                        <td>
+                            <form method="get">
+                                <button type="submit" th:formaction="@{templates/offerDetails/{id}(id=${candidate.id})}" class="btn btn-primary btn-sm">View</button>
+                                <button type="submit" th:formaction="@{templates/editOffer/{id}(id=${candidate.id})}" class="btn btn-info btn-sm">Edit</button>
+                            </form>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+    // Open the Candidate List tab by default
+    document.getElementById("CandidateList").style.display = "block";
+    document.getElementsByClassName("tablinks")[0].className += " active";
+</script>
+
+</body>
+</html>

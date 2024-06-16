@@ -1,0 +1,196 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left {
+    width: 20%;
+    text-align: center;
+    background-color: navajowhite; /* Matching the sidebar color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 50px; /* Matching the icon size */
+    height: 50px; /* Matching the icon size */
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 28px; /* Matching the font size */
+    font-weight: bold;
+}
+
+.left a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center;
+    padding: 15px 0; /* Adjusted padding */
+    width: 100%;
+    font-size: 18px;
+    justify-content: center; /* Center content */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.left a:hover {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.left a .icon {
+    margin-bottom: 5px; /* Space between icon and text */
+    font-size: 20px; /* Adjust icon size */
+}
+
+.left .home {
+    background-color: #ccc;
+}
+
+.left .home:hover {
+    background-color: beige;
+}
+
+.left .remain {
+    margin-top: 10px; /* Add space between items */
+}
+
+.right {
+    width: 80%;
+    padding: 20px;
+    background-color: white;
+    overflow-y: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header .title {
+    font-size: 30px; /* Updated to match createOffer */
+    font-weight: bold;
+}
+
+.header .user-info {
+    font-size: 14px;
+    color: gray;
+}
+
+.header .user-info a {
+    text-decoration: none;
+    color: blue;
+    margin-left: 10px;
+}
+
+.breadcrumb {
+    font-size: 16px; /* Updated to match createOffer */
+    margin-bottom: 20px;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: black;
+}
+
+.content {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-section {
+    background-color: #e9f1f7; /* Updated to match createOffer */
+    padding: 20px; /* Updated to match createOffer */
+    border-radius: 10px; /* Updated to match createOffer */
+    margin-bottom: 20px; /* Updated to match createOffer */
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.row label {
+    display: block; /* Updated to match createOffer */
+    margin-bottom: 5px; /* Updated to match createOffer */
+    font-weight: bold; /* Updated to match createOffer */
+}
+
+.row div {
+    text-align: right;
+}
+
+.form-section {
+    margin-bottom: 15px; /* Updated to match createOffer */
+}
+
+.form-section input,
+.form-section select,
+.form-section textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.date-range {
+    display: flex;
+    gap: 10px; /* Updated to match createOffer */
+}
+
+.date-range input {
+    flex: 1; /* Updated to match createOffer */
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px; /* Updated to match createOffer */
+}
+
+.actions button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+}
+
+.actions .edit-button {
+    background-color: #007bff;
+}
+
+.actions .cancel-button {
+    background-color: #6c757d; /* Updated to match createOffer */
+}
